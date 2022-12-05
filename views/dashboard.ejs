@@ -1,0 +1,46 @@
+<%- include('header') -%>
+<div class="height-100 ">
+    <div class="container stage">
+        <div class="container">
+            <div class="row">
+                <h2 class="mt-5 mb-4">Hi <%= locals.name? name : "User" %> <br> Movies around you ...</h2>
+                <% for(var i=0;i < result.length;i++){ %>
+                <div class="four col-md-3">
+                    <div class="card card-b ">
+                        <img src="<%= result[i].m_link %>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title"><%= result[i].m_name %></h5>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                <!-- <div class="four col-md-3">
+                    <div class="card card-b ">
+                        <img src="/static/images/img2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title"><%= result[0].m_name %></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="four col-md-3">
+                    <div class="card card-b ">
+                        <img src="/static/images/img3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">How To Be You</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="four col-md-3">
+                    <div class="card card-b ">
+                        <img src="/static/images/img4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">How To Be You</h5>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    
+</div>
+<%- include('footer') -%>

@@ -1,0 +1,435 @@
+
+.bpic
+{
+background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('login_banner.jpg');;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center; 
+background-size: cover;
+background-blend-mode: normal;
+
+}
+
+
+href
+{
+  text-decoration: none;
+}
+
+/* LOGIN */
+.logo-login
+{
+  width: 45%;
+  height: 45%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+.btn-google {
+  color: white !important;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white !important;
+  background-color: #3b5998;
+}
+.btn-login
+{
+  background-color: #2ec4b6 !important;
+}
+
+
+/* DASHBOARD */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+  --z-fixed: 100;
+} 
+
+*,
+::before,
+::after {
+  box-sizing: border-box
+}
+
+body {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s
+}
+
+.links{
+  text-decoration: none !important;
+}
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: #2ec4b6;
+  z-index: var(--z-fixed);
+  transition: .5s
+}
+
+.header_toggle {
+  color:black;
+  font-size: 1.5rem;
+  cursor: pointer
+}
+
+.header_img {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden
+}
+
+.header_img img {
+  width: 40px
+}
+
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: #2ec4b6;
+  padding: .5rem 1rem 0 0;
+  transition: .5s;
+  z-index: var(--z-fixed)
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden
+}
+
+.nav_logo,
+.nav_link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: .5rem 0 .5rem 1.5rem
+}
+
+.nav_logo {
+  margin-bottom: 2rem
+}
+
+.nav_logo-icon {
+  font-size: 1.25rem;
+  color: BLACK;
+}
+
+.nav_logo-name {
+  color:black;
+  font-weight: 700;
+}
+
+.nav_link {
+  position: relative;
+  color:black;
+  margin-bottom: 1.5rem;
+  transition: .3s
+}
+
+.nav_link:hover {
+  color:black
+}
+
+.nav_icon {
+  font-size: 1.25rem
+}
+
+.show {
+  left: 0
+}
+
+.body-pd {
+  padding-left: calc(var(--nav-width) + 1rem)
+}
+
+.active {
+  color: black;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background-color: white;
+}
+
+.height-100 {
+  height: 100vh
+}
+
+@media screen and (min-width: 768px) {
+  body {
+      margin: calc(var(--header-height) + 2rem) 0 0 0;
+      padding-left: calc(var(--nav-width) + 2rem)
+  }
+
+  .header {
+      height: calc(var(--header-height) + 1rem);
+      padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
+  }
+
+  .header_img {
+      width: 40px;
+      height: 40px
+  }
+
+  .header_img img {
+      width: 45px
+  }
+
+  .l-navbar {
+      left: 0;
+      padding: 1rem 1rem 0 0
+  }
+
+  .show {
+      width: calc(var(--nav-width) + 156px)
+  }
+
+  .body-pd {
+      padding-left: calc(var(--nav-width) + 188px)
+  }
+}
+
+
+
+/* COUNTER */
+.stage
+{
+margin-top: 100px;
+}
+.counter-box {
+display: block;
+background: #f6f6f6;
+padding: 40px 20px 37px;
+text-align: center
+}
+
+.counter-box p {
+margin: 5px 0 0;
+padding: 0;
+color: black;
+font-size: 18px;
+font-weight: 500
+}
+
+.counter-box i {
+font-size: 60px;
+margin: 0 0 15px;
+color: black
+}
+
+.counter {
+display: block;
+font-size: 32px;
+font-weight: 700;
+color: black;
+line-height: 28px
+}
+
+.counter-box.colored {
+background: #3acf87
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+color: #fff
+}
+
+
+
+/* SEARCH */
+
+.height {
+height: 100vh
+}
+
+.form {
+position: relative
+}
+
+.form .fa-search {
+position: absolute;
+top: 20px;
+left: 20px;
+color: #9ca3af
+}
+
+.form span {
+position: absolute;
+right: 17px;
+top: 13px;
+padding: 2px;
+border-left: 1px solid #d1d5db
+}
+
+.left-pan {
+padding-left: 7px
+}
+
+.left-pan i {
+padding-left: 10px
+}
+
+.form-input {
+height: 55px;
+text-indent: 33px;
+border-radius: 10px
+}
+
+.form-input:focus {
+box-shadow: none;
+border: none
+}
+
+.card
+{
+box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+background: white;
+
+}
+
+
+
+/* ADD */
+.write {
+display: block;
+position: fixed;
+bottom: 75px;
+right: 55px;
+z-index: 99;
+font-size: 18px;
+border: none;
+outline: none;
+background-color:#383838;
+color: white;
+cursor: pointer;
+padding: 15px;
+border-radius: 4px;
+}
+
+.write:hover {
+background-color: #555;
+}
+
+
+/* FORM */
+.blue-text {
+color: #00BCD4
+}
+
+.form-control-label {
+margin-bottom: 0
+}
+
+input,
+textarea,
+button {
+padding: 8px 15px;
+border-radius: 5px !important;
+margin: 5px 0px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+font-size: 18px !important;
+font-weight: 300
+}
+
+input:focus,
+textarea:focus {
+-moz-box-shadow: none !important;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+border: 1px solid #00BCD4;
+outline-width: 0;
+font-weight: 400
+}
+
+.btn-block {
+text-transform: uppercase;
+font-size: 15px !important;
+font-weight: 400;
+height: 43px;
+cursor: pointer
+}
+
+.btn-block:hover {
+color: #fff !important
+}
+
+button:focus {
+-moz-box-shadow: none !important;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+outline-width: 0
+}
+
+.card_pat
+{
+padding: 30px 40px;
+margin-top: 60px;
+margin-bottom: 60px;
+border: none !important;
+box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+}
+.banpic
+{
+background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('banner.jpg');;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center; 
+background-size: cover;
+background-blend-mode: normal;
+}
+
+
+
+
+.highlights
+{
+background-color: #9cbbb8 !important;
+}
+
+.btn-sub
+{
+  background-color: #2ec4b6 !important;
+ 
+}
