@@ -9,7 +9,9 @@ background-size: cover;
 background-blend-mode: normal;
 
 }
-
+a{
+    text-decoration: none;
+}
 
 href
 {
@@ -323,7 +325,7 @@ border: none
 .card
 {
 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
+cursor: pointer;
 background: white;
 
 }

@@ -6,8 +6,8 @@
                 <h2 class="mt-5 mb-4">Hi <%= locals.name? name : "User" %> <br> Movies around you ...</h2>
                 <% for(var i=0;i < result.length;i++){ %>
                 <div class="four col-md-3">
-                    <div class="card card-b ">
-                        <img src="<%= result[i].m_link %>" class="card-img-top" alt="...">
+                    <a href="/theater/<%= result[i].m_id %>"><div class="card card-b ">
+                        <img src="<%= result[i].m_link %>" class="card-img-top" alt="..."></a>
                         <div class="card-body">
                         <h5 class="card-title"><%= result[i].m_name %></h5>
                         </div>

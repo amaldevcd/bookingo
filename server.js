@@ -3,6 +3,8 @@ const path = require('path');
 const connection = require('./db');
 const db = require('./db')
 
+const theater = require('./theater');
+
 const app = express();
 
 app.set('view engine','ejs');
@@ -19,6 +21,8 @@ app.get('/',async (req,res)=>
         }
     })
 })
+
+app.use('/theater',theater);
 
 app.listen(3030,()=>{
     console.log("Server is starting..");
