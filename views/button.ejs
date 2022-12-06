@@ -1,0 +1,8 @@
+<%= if(result[i].rem_seat >=40){ %>
+<button type="button" class= "btn btn-outline-success"><%= result[i].s_time %>:00</button>
+<% } else if(result[i].rem_seat > 20){ %>
+<button type="button" class= "btn btn-outline-warning"><%= result[i].s_time %>:00</button>
+<% } else{ %> 
+<button type="button" class= "btn btn-outline-danger"><%= result[i].s_time %>:00</button>
+<% } %>
+

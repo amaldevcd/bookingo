@@ -1,0 +1,25 @@
+<%- include('header') -%>
+<div class="height-100 ">
+    <div class="container stage">
+        <div class="container">
+            <div class="row">
+                <h2 class="mt-5 mb-4">Hi <%= locals.name? name : "User" %> <br> Showtimes </h2>
+                        <% for(var i=0; i < result.length; i++) {%>
+                            <% if(result[i].rem_seat >=40){ %>
+                                <button type="button" class= "btn btn-outline-success" onclick="window.location.href='/book/<%= result[i].s_id %>';"><%= result[i].s_time %>:00 (<%= result[i].rem_seat %>)</button>
+                                <% } else if(result[i].rem_seat >= 20){ %>
+                                <button type="button" class= "btn btn-outline-warning" onclick="window.location.href='/book/<%= result[i].s_id %>';"><%= result[i].s_time %>:00 (<%= result[i].rem_seat %>)</button>
+                                <% } else if(result[i].rem_seat == 0){ %>
+                                    <button type="button" class= "btn btn-outline-danger" disabled><%= result[i].s_time %>:00 (<%= result[i].rem_seat %>)</button>
+                                <% } else{ %> 
+                                <button type="button" class= "btn btn-outline-danger" onclick="window.location.href='/book/<%=result[i].s_id %>';"><%= result[i].s_time %>:00 (<%= result[i].rem_seat %>)</button>
+                                <% } %>
+                        <% }%>
+    <!-- <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-primary">Primary</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+  <%- include('footer') -%>

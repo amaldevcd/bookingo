@@ -1,0 +1,45 @@
+<%- include('header') -%>
+
+<div class="height-100 ">
+    <div class="container stage">
+        <div class="container">
+            <div class="row">
+                <h2 class="mt-5 mb-4">Hi <%= locals.name? name : "User" %> <br> You are almost there!!</h2>
+                <form action="/ticket/<%= s_id>" method="get">
+                    <fieldset>
+                      <legend>Select the number of seats</legend>
+                      <div class="mb-3">
+                        <label for="Select" class="form-label">No of seats</label>
+                        <select id="Select" class="form-select">
+                        <%= if(remSeat>4){ %>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        <% }else if(remSeat>3){ %>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        <% }else if(remSeat>2){ %>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                         <% }else if(remSeat>1){ %>
+                            <option>1</option>
+                            <option>2</option>
+                        <% }else{ %>
+                            <option>1</option>
+                        <% } %>
+                        </select>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Book</button>
+                    </fieldset>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') -%>

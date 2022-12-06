@@ -3,7 +3,11 @@ const path = require('path');
 const connection = require('./db');
 const db = require('./db')
 
+const server  = express.Router();
+
+const shows = require('./shows')
 const theater = require('./theater');
+const book = require('./book');
 
 const app = express();
 
@@ -23,7 +27,10 @@ app.get('/',async (req,res)=>
 })
 
 app.use('/theater',theater);
+app.use('/shows',shows);
+app.use('/book',book)
 
 app.listen(3030,()=>{
     console.log("Server is starting..");
 })
+module.exports=server;

@@ -435,3 +435,9 @@ background-color: #9cbbb8 !important;
   background-color: #2ec4b6 !important;
  
 }
+
+/* accordion */
+.accordion-body
+{
+    width: 30rem;
+}
