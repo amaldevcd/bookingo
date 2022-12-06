@@ -8,6 +8,7 @@ const server  = express.Router();
 const shows = require('./shows')
 const theater = require('./theater');
 const book = require('./book');
+const ticket = require('./ticket')
 
 const app = express();
 
@@ -28,7 +29,8 @@ app.get('/',async (req,res)=>
 
 app.use('/theater',theater);
 app.use('/shows',shows);
-app.use('/book',book)
+app.use('/book',book);
+app.use('/ticket',ticket);
 
 app.listen(3030,()=>{
     console.log("Server is starting..");

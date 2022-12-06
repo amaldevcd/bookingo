@@ -1,0 +1,29 @@
+<%- include('header') -%>
+
+<div class="height-100 ">
+    <div class="container stage">
+        <div class="container">
+            <div class="row">
+                <h2 class="mt-5 mb-4">Hi <%= locals.name? name : "User" %> <br> Movies around you ...</h2>
+                <div class="col-md-12 col-sm-6">
+                    <div class="ticket-card">
+                        <div class="card mb-3" style="max-width: 800px;">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="<%= mresult[0].m_link %>" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><%= mresult[0].m_name %></h5>
+                                  <p class="card-text">Theater : <%= tresult[0].t_name%></p>
+                                  <p class="card-text">Show Time : <%= showtime %></p>
+                                  <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') -%>

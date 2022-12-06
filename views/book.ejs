@@ -5,13 +5,13 @@
         <div class="container">
             <div class="row">
                 <h2 class="mt-5 mb-4">Hi <%= locals.name? name : "User" %> <br> You are almost there!!</h2>
-                <form action="/ticket/<%= s_id>" method="get">
+                <form action="/pay/<%= s_id %>" method="post">
                     <fieldset>
                       <legend>Select the number of seats</legend>
                       <div class="mb-3">
                         <label for="Select" class="form-label">No of seats</label>
                         <select id="Select" class="form-select">
-                        <%= if(remSeat>4){ %>
+                        <% if(remSeat>4){ %>
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
