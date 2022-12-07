@@ -10,7 +10,7 @@ router.get('/',async (req,res) =>
         await db.query(ticketQuery, function(error,result){
             if(error)console.log(error);
             else{
-                res.render('list',{title:"My Tickets",result});
+                res.render('list',{title:"My Tickets",result,user:req.session.uname});
             }
         })
     }
@@ -18,5 +18,21 @@ router.get('/',async (req,res) =>
    res.redirect('/login/page');
     
 })
+
+router.get('/delete/:b_id',async (req,res)=>{
+    if(req.session.uname)
+    {
+        var delQuery = "delete from Book where b_id = '"+req.params.b_id+"'";
+        await db.query(delQuery, function(error,result){
+            if(error)console.log(error);
+            else{
+                res.redirect('/list')
+            }
+        })
+    }
+   else
+   res.redirect('/login/page');
+})
+
 
 module.exports = router;
