@@ -1,7 +1,7 @@
 
 .bpic
 {
-background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('login_banner.jpg');;
+background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('/public/images/img_wall.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center; 

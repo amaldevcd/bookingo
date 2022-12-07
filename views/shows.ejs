@@ -3,7 +3,7 @@
     <div class="container stage">
         <div class="container">
             <div class="row">
-                <h2 class="mt-5 mb-4">Hi <%= locals.name? name : "User" %> <br> Showtimes </h2>
+                <h2 class="mt-5 mb-4">Hi <%= locals.user? user : "User" %> <br> Showtimes </h2>
                         <% for(var i=0; i < result.length; i++) {%>
                             <% if(result[i].rem_seat >=40){ %>
                                 <button type="button" class= "btn btn-outline-success" onclick="window.location.href='/book/<%= result[i].s_id %>';"><%= result[i].s_time %>:00 (<%= result[i].rem_seat %>)</button>

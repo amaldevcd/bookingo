@@ -15,7 +15,7 @@ router.get('/:mid/:tid',async (req,res)=>
         else
         {
             console.log(result[0].rem_seat);
-            res.render('shows',{title:"Shows",result,m_id,t_id})
+            res.render('shows',{title:"Shows",result,m_id,t_id,user : req.session.uname})
         }
     })
 })

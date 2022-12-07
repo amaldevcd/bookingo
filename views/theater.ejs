@@ -3,7 +3,7 @@
     <div class="container stage">
         <div class="container">
             <div class="row">
-                <h2 class="mt-5 mb-4">Hi <%= locals.name? name : "User" %> <br> Theaters around you ...</h2>
+                <h2 class="mt-5 mb-4">Hi <%= locals.user? user : "User" %> <br> Theaters around you ...</h2>
                 <div class="accordion" id="accordionExample">
                     <% for(var i=0; i < result.length; i++){ %>
                     <div class="accordion-item">

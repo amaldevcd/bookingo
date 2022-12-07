@@ -25,7 +25,7 @@ router.get('/:sid/:bid', async(req,res)=>{
                                         var b_status = bresult[0].b_status;
                                         var price = bresult[0].price;
                                         var seat_no = bresult[0].seat_no
-                                        res.render('ticket',{title:"Confirm",mresult,tresult,showtime,b_id,b_status,price,seat_no})
+                                        res.render('ticket',{title:"Confirm",mresult,tresult,showtime,b_id,b_status,price,seat_no,user : req.session.uname})
                                     }
 
                                 })

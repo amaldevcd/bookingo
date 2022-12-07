@@ -13,7 +13,7 @@ router.get('/:sid', async(req,res)=>
         else{
             var remSeat = result[0].rem_seat;
             var s_id= req.params.sid;
-            res.render('book',{title:"Book",remSeat,s_id});
+            res.render('book',{title:"Book",remSeat,s_id,user : req.session.uname});
         }
     })
    

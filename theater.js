@@ -13,7 +13,7 @@ router.get('/:tid',async(req,res)=>
     await db.query(theaterSearch,async function(error,result,rows){
         if(!!error)log(error)
         else{
-            res.render('theater',{title:"Theater",result,m_id});
+            res.render('theater',{title:"Theater",result,m_id,user : req.session.uname});
         }
     })
     
