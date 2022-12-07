@@ -21,7 +21,7 @@ router.post('/',async (req,res)=>{
     var mobno=req.body.mobno;
     var passwd=req.body.passwd;
     var cpasswd=req.body.cpasswd;
-    var u_id = Math.floor(Math.random() * 9999);
+    var u_id = Math.floor(Math.random() * 999999);
     var usernameSearch = "select username from Users where username='"+username+"'";
 
     await db.query(usernameSearch,async function(error,result){

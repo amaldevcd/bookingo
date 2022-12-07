@@ -15,6 +15,7 @@ const ticket = require("./ticket");
 const pay = require("./pay");
 const login = require('./login');
 const signup = require('./signup')
+const list = require('./list');
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use("/ticket", ticket);
 app.use("/pay", pay);
 app.use('/login',login);
 app.use('/signup',signup);
+app.use('/list',list);
 
 app.get("/", async (req, res) => {
     console.log(req.session.user);

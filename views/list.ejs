@@ -1,0 +1,22 @@
+<%- include('header') -%>
+
+<div class="height-100 ">
+    <div class="container stage">
+        <div class="container">
+            <div class="row">
+                <h2 class="mt-5 mb-4">Hi <%= locals.user? user : "User" %> <br> Theaters around you ...</h2>
+                <% for(var i=0;i < result.length; i++){%>
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= result[i].b_id %></h5>
+                      <p class="card-text">Booking Status : <%= result[i].b_status %></p>
+                      <a href="/ticket/<%= result[i].s_id %>/<%= result[i].b_id%>" class="btn btn-primary">View</a>
+                    </div>
+                  </div>               
+                <% } %>   
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('footer') -%>
